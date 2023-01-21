@@ -36,7 +36,9 @@ app.use(
 );
 
 app.use(
-  cors()
+  cors({
+    credentials: true,
+  })
 );
 app.use(express.json());
 app.use(UserRoutes);
@@ -47,6 +49,9 @@ app.use(Header);
 
 // store.sync();
 
-app.listen(process.env.APP_PORT, () => {
+const PORT = process.env.APP_PORT || 3000;
+
+app.listen(PORT, () => {
   console.log("Server Running");
 });
+
