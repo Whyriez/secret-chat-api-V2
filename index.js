@@ -36,9 +36,7 @@ app.use(
 );
 
 app.use(
-  cors({
-    credentials: true,
-  })
+  cors()
 );
 app.use(express.json());
 app.use(UserRoutes);
