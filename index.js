@@ -45,7 +45,7 @@ app.use(AuthRoute);
 app.use(Public);
 app.use(Header);
 
-// store.sync();
+store.sync();
 
 const PORT = process.env.APP_PORT || 3000;
 
