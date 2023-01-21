@@ -38,7 +38,6 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: "http://secret-chat.my.id",
   })
 );
 app.use(express.json());
