@@ -30,7 +30,7 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: false === "production",
+      secure: false,
     },
   })
 );
