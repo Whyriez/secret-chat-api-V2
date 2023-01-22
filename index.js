@@ -25,13 +25,12 @@ const store = new sessionStore({
 
 app.use(
   session({
-    key: 'userId',
     secret: 'as17896045jhuha2323snkadnkNIHJWfsdfDttUiurde367684eaGSDjsohfs',
     resave: false,
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: "auto", //jika pakai http maka false jika https maka true
+//       secure: "auto", //jika pakai http maka false jika https maka true
     },
   })
 );
@@ -42,6 +41,8 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
+
+app.use(cookieParser());
 
 app.use(express.json());
 app.use(UserRoutes);
