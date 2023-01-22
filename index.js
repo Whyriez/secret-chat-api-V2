@@ -30,9 +30,9 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: 'auto',
-      SameSite: 'none',
-      Access-Control-Allow-Origin: *,
+      secure: "auto",
+      SameSite: "none",
+      Access-Control-Allow-Origin: "*",
     },
   })
 );
