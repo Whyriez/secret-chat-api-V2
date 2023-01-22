@@ -51,9 +51,9 @@ app.use(Header);
 
 // store.sync();
 
-const PORT = process.env.APP_PORT || 3000;
+// const PORT = process.env.APP_PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(5000, () => {
   console.log("Server Running");
 });
 
