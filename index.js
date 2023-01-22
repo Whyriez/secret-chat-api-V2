@@ -32,7 +32,6 @@ app.use(
     cookie: {
       secure: "auto",
       SameSite: "strict",
-      Access-Control-Allow-Origin: "*",
     },
   })
 );
