@@ -30,7 +30,7 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: "auto", //jika pakai http maka false jika https maka true
+      secure: "false", //jika pakai http maka false jika https maka true
       sameSite: 'strict',
     },
   })
