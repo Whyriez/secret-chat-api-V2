@@ -27,10 +27,12 @@ app.use(
   session({
     secret: "2343434dfdsgdsgdfafhjyuoupkhhgngnndaawdwrsvdb",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: store,
     cookie: {
+      sameSite: 'none',
       secure: true,
+      httpOnly: true,
     },
   })
 );
