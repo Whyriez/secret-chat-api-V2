@@ -26,11 +26,11 @@ const store = new sessionStore({
 app.use(
   session({
     secret: "2343434dfdsgdsgdfafhjyuoupkhhgngnndaawdwrsvdb",
-    resave: false,
+    resave: true,
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: "auto",
+      secure: false === "production",
     },
   })
 );
