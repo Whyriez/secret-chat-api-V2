@@ -38,7 +38,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: "https://dark-lime-hermit-crab-sock.cyclic.app/",
+    origin: ["https://dark-lime-hermit-crab-sock.cyclic.app/","http://localhost:3000"],
   })
 );
 
