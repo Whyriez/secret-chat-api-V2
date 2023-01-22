@@ -30,8 +30,7 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      httpOnly: true,
-      secure: false,
+      secure: "auto",
     },
   })
 );
