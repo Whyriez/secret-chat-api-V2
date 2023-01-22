@@ -30,8 +30,7 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: "auto",
-      Access-Control-Allow-Credentials: true,
+      secure: false,
     },
   })
 );
