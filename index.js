@@ -31,6 +31,7 @@ app.use(
     store: store,
     cookie: {
       secure: "auto",
+      sameSite: 'none',
     },
   })
 );
