@@ -5,6 +5,7 @@ const db = new Sequelize(
   "freedb_secret-user",
   "AWpVpFE?VB82qSc",
   {
+     host: "sql.freedb.tech",
     dialect: "mysql",
     port: 3306,
   }
