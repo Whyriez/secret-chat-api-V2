@@ -25,13 +25,12 @@ const store = new sessionStore({
 
 app.use(
   session({
-    secret: 'as17896045jhuha2323snkadnkNIHJWfsdfDttUiurde367684eaGSDjsohfs',
+    secret: "2343434dfdsgdsgdfafhjyuoupkhhgngnndaawdwrsvdb",
     resave: false,
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: "false", //jika pakai http maka false jika https maka true
-      sameSite: 'strict',
+      secure: "auto",
     },
   })
 );
@@ -50,7 +49,7 @@ app.use(AuthRoute);
 app.use(Public);
 app.use(Header);
 
-store.sync();
+// store.sync();
 
 const PORT = process.env.APP_PORT || 3000;
 
