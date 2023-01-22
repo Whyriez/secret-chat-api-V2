@@ -25,10 +25,9 @@ const store = new sessionStore({
 
 app.use(
   session({
-    key: 'uuid',
-    secret: '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    secret: 'asjhuhasnkadnkNIHJWfsdfDttUiurdeeaGSDjsohfs',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: store,
     cookie: {
       secure: "auto", //jika pakai http maka false jika https maka true
