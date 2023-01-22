@@ -19,25 +19,29 @@ const store = new sessionStore({
   db: db,
 });
 
-(async () => {
-  await db.sync();
-})();
-
-// app.use(
-//   session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: true,
-//     store: store,
-//     cookie: {
-//       secure: "auto", //jika pakai http maka false jika https maka true
-//     },
-//   })
-// );
+// (async () => {
+//   await db.sync();
+// })();
 
 app.use(
-  cors()
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    store: store,
+    cookie: {
+      secure: "auto", //jika pakai http maka false jika https maka true
+    },
+  })
 );
+
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://dark-lime-hermit-crab-sock.cyclic.app/",
+  })
+);
+
 app.use(express.json());
 app.use(UserRoutes);
 app.use(PesanRoute);
@@ -45,7 +49,7 @@ app.use(AuthRoute);
 app.use(Public);
 app.use(Header);
 
-store.sync();
+// store.sync();
 
 const PORT = process.env.APP_PORT || 3000;
 
