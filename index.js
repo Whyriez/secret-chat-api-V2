@@ -27,7 +27,7 @@ app.use(
   session({
     secret: 'as17896045jhuha2323snkadnkNIHJWfsdfDttUiurde367684eaGSDjsohfs',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: store,
     cookie: {
       secure: "auto", //jika pakai http maka false jika https maka true
@@ -38,7 +38,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: ["https://dark-lime-hermit-crab-sock.cyclic.app/","http://localhost:3000"],
+    origin: "http://localhost:3000",
   })
 );
 
