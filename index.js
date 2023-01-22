@@ -31,7 +31,7 @@ app.use(
     store: store,
     cookie: {
       secure: "auto",
-      httpOnly : false,
+      Access-Control-Allow-Credentials: true,
     },
   })
 );
