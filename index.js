@@ -25,6 +25,7 @@ const store = new sessionStore({
 
 app.use(
   session({
+    key: 'userId',
     secret: 'as17896045jhuha2323snkadnkNIHJWfsdfDttUiurde367684eaGSDjsohfs',
     resave: false,
     saveUninitialized: true,
