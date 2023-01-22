@@ -25,7 +25,7 @@ const store = new sessionStore({
 
 app.use(
   session({
-    secret: 'asjhuhasnkadnkNIHJWfsdfDttUiurdeeaGSDjsohfs',
+    secret: 'as17896045jhuha2323snkadnkNIHJWfsdfDttUiurde367684eaGSDjsohfs',
     resave: false,
     saveUninitialized: false,
     store: store,
@@ -49,7 +49,7 @@ app.use(AuthRoute);
 app.use(Public);
 app.use(Header);
 
-// store.sync();
+store.sync();
 
 const PORT = process.env.APP_PORT || 3000;
 
