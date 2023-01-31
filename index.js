@@ -15,9 +15,9 @@ const app = express();
 
 const sessionStore = SequelizeStore(session.Store);
 
-const store = new sessionStore({
-  db: db,
-});
+// const store = new sessionStore({
+//   db: db,
+// });
 
 // (async () => {
 //   await db.sync();
@@ -30,7 +30,7 @@ app.use(
     saveUninitialized: true,
     store: store,
     cookie: {
-      sameSite: 'none',
+//       sameSite: 'none',
       secure: true,
       httpOnly: true,
     },
