@@ -15,9 +15,9 @@ const app = express();
 
 const sessionStore = SequelizeStore(session.Store);
 
-// const store = new sessionStore({
-//   db: db,
-// });
+const store = new sessionStore({
+  db: db,
+});
 
 // (async () => {
 //   await db.sync();
