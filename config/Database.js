@@ -21,7 +21,7 @@ const db = new Sequelize(
     port: 3306,
     dialectOptions: {
       ssl: {
-        rejectUnauthorized: true,
+        rejectUnauthorized: false,
       },
     },
   }
