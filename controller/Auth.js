@@ -23,8 +23,8 @@ export const Me = async (req, res) => {
     return res
       .status(401)
       .json({ message: "Please login with your account!!" });
-  }
-  const user = await Users.findOne({
+  }else{
+    const user = await Users.findOne({
     attributes: ["uuid", "name", "email", "role"],
     where: {
       uuid: req.session.userId,
@@ -32,6 +32,8 @@ export const Me = async (req, res) => {
   });
   if (!user) return res.status(404).json({ message: "User Not Found" });
   res.status(200).json(user);
+  }
+  
 };
 
 // export const Me = async (req, res) => {
