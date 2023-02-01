@@ -33,7 +33,7 @@ app.use(
 //       sameSite: 'none',
       maxAge: 24 * 60 * 60 * 1000 * 7,
       secure: true,
-//       httpOnly: true,
+      httpOnly: true,
     },
   })
 );
