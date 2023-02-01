@@ -18,10 +18,9 @@ const db = new Sequelize(
   {
     host: "ap-southeast.connect.psdb.cloud",
     dialect: "mysql",
-    port: 3306,
     dialectOptions: {
       ssl: {
-        rejectUnauthorized: false,
+        rejectUnauthorized: true,
       },
     },
   }
