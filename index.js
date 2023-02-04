@@ -41,7 +41,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: "http://secret-chat.my.id",
+    origin: ["http://secret-chat.my.id", "http://localhost:3000",],
   })
 );
 
